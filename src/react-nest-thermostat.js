@@ -1,6 +1,7 @@
 'use strict';
 
 const React = require('react');
+const PropTypes = require('prop-types');
 
 class Thermostat extends React.Component {
   getStyles() {
@@ -209,25 +210,25 @@ class Thermostat extends React.Component {
 
 Thermostat.propTypes = {
   /* Height of the thermostat (ex: 50% or 400px) */
-  height: React.PropTypes.string,
+  height: PropTypes.string,
   /* Width of the thermostat (ex: 50% or 400px) */
-  width: React.PropTypes.string,
+  width: PropTypes.string,
   /* Total number of ticks that will be rendered on the thermostat wheel */
-  numTicks: React.PropTypes.number,
+  numTicks: PropTypes.number,
   /* Lowest temperature able to be displayed on the thermostat */
-  minValue: React.PropTypes.number,
+  minValue: PropTypes.number,
   /* Highest temperature able to be displayed on the thermostat */
-  maxValue: React.PropTypes.number,
+  maxValue: PropTypes.number,
   /* Indicates whether or not the thermostat is in "away mode" */
-  away: React.PropTypes.bool,
+  away: PropTypes.bool,
   /* Indicates whether or not the thermostat is in "energy savings mode" */
-  leaf: React.PropTypes.bool,
+  leaf: PropTypes.bool,
   /* Actual temperature detected by the thermostat */
-  ambientTemperature: React.PropTypes.number,
+  ambientTemperature: PropTypes.number,
   /* Desired temperature that the thermostat attempts to reach */
-  targetTemperature: React.PropTypes.number,
+  targetTemperature: PropTypes.number,
   /* Current state of operations within the thermostat */
-  hvacMode: React.PropTypes.oneOf(['off', 'heating', 'cooling']),
+  hvacMode: PropTypes.oneOf(['off', 'heating', 'cooling']),
 };
 
 Thermostat.defaultProps = {
